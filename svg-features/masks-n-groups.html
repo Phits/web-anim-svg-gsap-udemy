@@ -1,0 +1,29 @@
+<div class="container">
+
+<!--  -->
+<svg viewBox="0 0 1000 600">
+
+ <!-- Group Example -->
+ <!--  <g id="men" fill="hotpink" transform="scale(0.5)" stroke="blue" stroke-width="5">
+    <path id="man1" transform="translate(0,0)" d="M150 0 L75 200 L225 200 Z"></path>
+    <path id="man2" transform="translate(200,0)" d="M150 0 L75 200 L225 200 Z"></path>
+    <path id="man3" transform="translate(400,0)" d="M150 0 L75 200 L225 200 Z"></path>
+  </g> -->
+
+  <!-- Mask -->
+  <defs>
+    <clipPath id="tri-mask">
+        <rect transform="translate(50,0)" x="380" y="0" width="200" height="200" fill="orange" />
+    </clippath>
+  </defs>
+
+   <g id="men" clip-path="url(#tri-mask)">
+    <path id="tri1" transform="translate(0,0)" d="M150 0 L75 200 L225 200 Z"></path>
+    <path id="tri2" transform="translate(200,0)" d="M150 0 L75 200 L225 200 Z"></path>
+    <path id="tri3" transform="translate(400,0)" d="M150 0 L75 200 L225 200 Z"></path>
+  </g>
+
+</svg>
+
+
+</div
