@@ -43,6 +43,19 @@
 	}
 
 	// enter floor vegetation
+	function enterFloorVegetation() {
+		var fleavesTL = new TimelineMax();
+
+		fleavesTL
+		    .staggerTo($floorLeaves, 1, {y:0, ease: Back.easeInOut}, 0.01)
+		    .fromTo($tree, 1.1, {scaleY:0.0, autoAlpha: 1, transformOrigin:'center bottom'}, 
+		    	{scaleY:1, autoAlpha: 1, transformOrigin:'center bottom', ease: Back.easeInOut})
+		    .fromTo($tree, 0.9, {scaleX:0.2, autoAlpha: 1, transformOrigin:'center bottom'}, 
+		    	{scaleX:1, autoAlpha: 1, transformOrigin:'center bottom', ease: Back.easeInOut}, '-=0.9')
+		    ;
+
+		return fleavesTL;
+	}
 
 	// enter tree
 
@@ -56,7 +69,7 @@
     
         masterTL
             .add(clearStage(), 'scene-clear-stage')
-
+            .add(enterFloorVegetation(), 'scene-floor-vegatation')
             ;
 
 		//TODO add child timelines to masterTL
